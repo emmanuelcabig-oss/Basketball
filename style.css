@@ -1,115 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     font-family: Arial;
-    background: radial-gradient(circle at top, #1b1b1b, #000);
+    background: radial-gradient(circle, #111, #000);
     color: white;
 }
 
-/* MAIN WRAPPER */
+/* MAIN */
 .scoreboard{
+    width: 100%;
     min-height: 100vh;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
 }
 
 /* TITLE */
 h1{
-    font-size: 42px;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+    font-size: clamp(20px, 4vw, 42px);
+    margin: 10px;
 }
 
 /* CARDS */
 .card{
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    padding: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
 }
 
 /* TIMERS */
 .timers{
     display: flex;
-    gap: 30px;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
 }
 
-.timer-card{
-    width: 320px;
-    padding: 15px;
-    text-align: center;
-}
-
-.timer{
-    font-size: 60px;
+.timer, .shot{
+    font-size: clamp(40px, 8vw, 70px);
     color: cyan;
-    margin: 10px 0;
-    text-shadow: 0 0 10px cyan;
-}
-
-.shot-clock{
-    font-size: 60px;
-    color: orange;
-    text-shadow: 0 0 10px orange;
 }
 
 /* TEAMS */
-.container{
+.teams{
     display: flex;
-    gap: 40px;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
 }
 
-.team{
-    width: 260px;
-    padding: 20px;
-    text-align: center;
-}
-
-.score{
-    font-size: 110px;
+.team .score{
+    font-size: clamp(50px, 12vw, 110px);
     color: lime;
-    text-shadow: 0 0 15px lime;
-    margin: 10px 0;
 }
 
-/* BUTTONS */
+/* CONTROLS */
+.controls{
+    margin: 5px 0;
+}
+
 button{
-    padding: 8px 12px;
-    margin: 4px;
+    padding: 6px 10px;
+    margin: 3px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     background: rgba(255,255,255,0.1);
     color: white;
-    transition: 0.2s;
+    font-size: clamp(10px, 2.5vw, 14px);
 }
 
 button:hover{
-    transform: scale(1.1);
     background: rgba(255,255,255,0.2);
 }
 
 /* INPUT */
 input{
-    padding: 8px;
-    width: 120px;
-    border-radius: 10px;
+    width: 80px;
+    padding: 6px;
+    margin: 5px 0;
+    border-radius: 8px;
     border: none;
     text-align: center;
-    margin: 5px 0;
 }
 
-/* RESET BUTTON */
-.reset-all{
-    margin-top: 25px;
-    padding: 12px 25px;
-    font-size: 18px;
+/* RESET */
+.reset{
+    margin-top: 20px;
     background: red;
     color: white;
-    border-radius: 12px;
-    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
