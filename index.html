@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Basketball Scoreboard</title>
+    <title>Basketball Scoreboard</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,17 +13,16 @@
 
 <div class="scoreboard">
 
-    <!-- TITLE -->
     <h1>🏀 LIVE SCOREBOARD</h1>
 
-    <!-- TOP TIMERS -->
+    <!-- TIMERS -->
     <div class="timers">
 
-        <div class="card timer-card">
+        <div class="card">
             <h2>GAME TIME</h2>
             <div class="timer" id="gameTimer">00:00</div>
 
-            <input type="number" id="minutesInput" placeholder="Minutes">
+            <input type="number" id="minutesInput" placeholder="Min">
 
             <div class="controls">
                 <button onclick="setGameTime()">Set</button>
@@ -33,11 +32,11 @@
             </div>
         </div>
 
-        <div class="card timer-card">
+        <div class="card">
             <h2>SHOT CLOCK</h2>
-            <div class="shot-clock" id="shotClock">24</div>
+            <div class="shot" id="shotClock">24</div>
 
-            <input type="number" id="shotInput" placeholder="Seconds">
+            <input type="number" id="shotInput" placeholder="Sec">
 
             <div class="controls">
                 <button onclick="setShotClock()">Set</button>
@@ -50,12 +49,10 @@
     </div>
 
     <!-- TEAMS -->
-    <div class="container">
+    <div class="teams">
 
-        <div class="team card">
-
+        <div class="card team">
             <h2>TEAM A</h2>
-
             <div class="score" id="scoreA">0</div>
 
             <div class="controls">
@@ -69,13 +66,10 @@
                 <button onclick="removePoints('A',2)">-2</button>
                 <button onclick="removePoints('A',3)">-3</button>
             </div>
-
         </div>
 
-        <div class="team card">
-
+        <div class="card team">
             <h2>TEAM B</h2>
-
             <div class="score" id="scoreB">0</div>
 
             <div class="controls">
@@ -89,20 +83,15 @@
                 <button onclick="removePoints('B',2)">-2</button>
                 <button onclick="removePoints('B',3)">-3</button>
             </div>
-
         </div>
 
     </div>
 
-    <!-- RESET -->
-    <button class="reset-all" onclick="resetEverything()">
-        RESET ALL
-    </button>
+    <button class="reset" onclick="resetEverything()">RESET ALL</button>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
