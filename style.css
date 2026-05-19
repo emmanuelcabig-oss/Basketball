@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    font-family: Arial;
+    background: radial-gradient(circle at top, #1b1b1b, #000);
+    color: white;
+}
+
+/* MAIN WRAPPER */
+.scoreboard{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* TITLE */
+h1{
+    font-size: 42px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* CARDS */
+.card{
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* TIMERS */
+.timers{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.timer-card{
+    width: 320px;
+    padding: 15px;
+    text-align: center;
+}
+
+.timer{
+    font-size: 60px;
+    color: cyan;
+    margin: 10px 0;
+    text-shadow: 0 0 10px cyan;
+}
+
+.shot-clock{
+    font-size: 60px;
+    color: orange;
+    text-shadow: 0 0 10px orange;
+}
+
+/* TEAMS */
+.container{
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.team{
+    width: 260px;
+    padding: 20px;
+    text-align: center;
+}
+
+.score{
+    font-size: 110px;
+    color: lime;
+    text-shadow: 0 0 15px lime;
+    margin: 10px 0;
+}
+
+/* BUTTONS */
+button{
+    padding: 8px 12px;
+    margin: 4px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    transition: 0.2s;
+}
+
+button:hover{
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.2);
+}
+
+/* INPUT */
+input{
+    padding: 8px;
+    width: 120px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* RESET BUTTON */
+.reset-all{
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 18px;
+    background: red;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+}

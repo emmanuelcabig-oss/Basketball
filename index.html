@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Basketball Scoreboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="scoreboard">
+
+    <!-- TITLE -->
+    <h1>🏀 LIVE SCOREBOARD</h1>
+
+    <!-- TOP TIMERS -->
+    <div class="timers">
+
+        <div class="card timer-card">
+            <h2>GAME TIME</h2>
+            <div class="timer" id="gameTimer">00:00</div>
+
+            <input type="number" id="minutesInput" placeholder="Minutes">
+
+            <div class="controls">
+                <button onclick="setGameTime()">Set</button>
+                <button onclick="startGameTimer()">Start</button>
+                <button onclick="pauseGameTimer()">Pause</button>
+                <button onclick="resetGameTimer()">Reset</button>
+            </div>
+        </div>
+
+        <div class="card timer-card">
+            <h2>SHOT CLOCK</h2>
+            <div class="shot-clock" id="shotClock">24</div>
+
+            <input type="number" id="shotInput" placeholder="Seconds">
+
+            <div class="controls">
+                <button onclick="setShotClock()">Set</button>
+                <button onclick="startShotClock()">Start</button>
+                <button onclick="pauseShotClock()">Pause</button>
+                <button onclick="resetShotClock()">Reset</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- TEAMS -->
+    <div class="container">
+
+        <div class="team card">
+
+            <h2>TEAM A</h2>
+
+            <div class="score" id="scoreA">0</div>
+
+            <div class="controls">
+                <button onclick="addPoints('A',1)">+1</button>
+                <button onclick="addPoints('A',2)">+2</button>
+                <button onclick="addPoints('A',3)">+3</button>
+            </div>
+
+            <div class="controls">
+                <button onclick="removePoints('A',1)">-1</button>
+                <button onclick="removePoints('A',2)">-2</button>
+                <button onclick="removePoints('A',3)">-3</button>
+            </div>
+
+        </div>
+
+        <div class="team card">
+
+            <h2>TEAM B</h2>
+
+            <div class="score" id="scoreB">0</div>
+
+            <div class="controls">
+                <button onclick="addPoints('B',1)">+1</button>
+                <button onclick="addPoints('B',2)">+2</button>
+                <button onclick="addPoints('B',3)">+3</button>
+            </div>
+
+            <div class="controls">
+                <button onclick="removePoints('B',1)">-1</button>
+                <button onclick="removePoints('B',2)">-2</button>
+                <button onclick="removePoints('B',3)">-3</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RESET -->
+    <button class="reset-all" onclick="resetEverything()">
+        RESET ALL
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
