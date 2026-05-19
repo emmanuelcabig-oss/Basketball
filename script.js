@@ -34,14 +34,13 @@ function removePoints(team, points){
 function updateGame(){
     let m = Math.floor(gameSeconds / 60);
     let s = gameSeconds % 60;
-    s = s < 10 ? "0" + s : s;
+    if(s < 10) s = "0" + s;
 
     document.getElementById("gameTimer").innerText = `${m}:${s}`;
 }
 
 function setGameTime(){
-    let mins = document.getElementById("minutesInput").value;
-    gameSeconds = mins * 60;
+    gameSeconds = Number(document.getElementById("minutesInput").value) * 60;
     updateGame();
 }
 
@@ -72,7 +71,7 @@ function updateShot(){
 }
 
 function setShotClock(){
-    shotSeconds = document.getElementById("shotInput").value;
+    shotSeconds = Number(document.getElementById("shotInput").value);
     updateShot();
 }
 
